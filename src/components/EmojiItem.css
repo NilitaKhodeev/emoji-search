@@ -1,0 +1,34 @@
+.emoji-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    cursor: default;
+}
+
+.emoji-item:hover {
+    background-color: #f9f9f9;
+}
+
+.emoji-char {
+    font-size: 1.5rem;
+}
+
+.emoji-name {
+    flex: 1;
+    margin: 0 12px;
+    color: #333;
+}
+
+.copy-btn {
+    padding: 4px 8px;
+    border: 1px solid #888;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.copy-btn:hover {
+    background: #f0f0f0;
+}
