@@ -7,26 +7,32 @@ export default function App() {
   const [emojis, setEmojis] = useState([]);
 
   useEffect(() => {
-    fetch('https://emoji-api.com/emojis?access_key=5d43adc8df0a61e7b7fb70c8e19ccf7da1f63338')
+    fetch(`https://emoji-api.com/emojis?access_key=${process.env.REACT_APP_EMOJI_KEY}`)
       .then(res => res.json())
       .then(data => setEmojis(data))
       .catch(console.error);
   }, []);
 
   const filtered = emojis.filter(e =>
-    e.slug.includes(query.toLowerCase())
+    e.slug.toLowerCase().includes(query.toLowerCase())
   );
 
   return (
     <div className="app-container">
-      <h1 className="app-title">Emoji Search</h1>
+      <div className="header">
+        <span role="img" aria-label="emoji">😺</span>
+        <h1>Emoji Search</h1>
+        <span role="img" aria-label="emoji">😺</span>
+      </div>
+
       <input
         className="app-input"
         type="text"
-        placeholder="Введите слово..."
+        placeholder="Search emojis..."
         value={query}
         onChange={e => setQuery(e.target.value)}
       />
+
       <EmojiList list={filtered} />
     </div>
   );

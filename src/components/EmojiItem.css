@@ -3,32 +3,35 @@
     align-items: center;
     justify-content: space-between;
     padding: 8px;
-    border-bottom: 1px solid #eee;
-    cursor: default;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    transition: background 0.2s;
 }
 
 .emoji-item:hover {
-    background-color: #f9f9f9;
+    background: #fafafa;
 }
 
 .emoji-char {
     font-size: 1.5rem;
+    margin-right: 12px;
 }
 
 .emoji-name {
     flex: 1;
-    margin: 0 12px;
     color: #333;
 }
 
 .copy-btn {
     padding: 4px 8px;
-    border: 1px solid #888;
-    background: white;
+    border: none;
+    background: #eee;
     border-radius: 4px;
     cursor: pointer;
+    transition: background 0.2s;
 }
 
 .copy-btn:hover {
-    background: #f0f0f0;
+    background: #ddd;
 }
